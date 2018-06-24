@@ -1,0 +1,12 @@
+blend syntax/ semantics
+
+blend {var1} {var2}
+
+var1 is the alpha channel of whatever was returned via youir fragment shader
+var2 handles whatever had exsisted behind or previous to the current element
+
+To ensure proper transparency you need to make sure that the object is being rendered LATER IN THE DRAW
+to do thiswe set its render queue to transparent in tags
+Tag {"Queue"="Transparent"}
+
+THis will achieve a very simple transparecny effect, however anything more than that will require much more work.
